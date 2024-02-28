@@ -1,0 +1,47 @@
+{% extends 'dummy.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Sign in</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/c1.css' %}">
+{% endblock %}
+
+
+{% block body_block %}
+  
+    <div class="col-md-12 mb-4 white-dark text-center wow fadeIn">
+        <h3 class="display-3 font-weight-bold text-primary mb-0 pt-md-5 pt-5">Arabian Shawarma Signup</h3>
+        <hr class="hr-light my-4 w-75">
+        <h4 class="subtext-header mt-2 mb-4 text-primary">One of life's greatest joys is Eating good food,one step away to Signup...</h4>
+    </div>
+    <center>
+        <div class="bg-image">
+            <div class="signup-container">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                    <div class="bg-white">
+                       <h5>{{PFO.as_p}}</h5>
+                       <h5>{{UFO.as_p}}</h5>
+                       <input type="submit" class="btn btn-info my-4" value="sign in">
+                    </div>
+                   <!-- <h5 class="bg-white">{{PFO.as_p}}</h5>
+                   <h5 class="bg-white">{{UFO.as_p}}</h5> -->
+                
+            </form>
+            </div>
+        </div>
+
+    <style>
+        form{
+            
+            border-radius: 20px;
+            width:300x;
+            
+          
+        }
+
+     
+    </style>
+  </center>
+{% endblock %}
+

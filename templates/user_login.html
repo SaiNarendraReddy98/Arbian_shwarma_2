@@ -1,0 +1,36 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+    <title>login</title>
+{% endblock %}
+
+
+{% block body_block %}
+
+    <div class="col-md-12 mb-4 white-primary text-center wow fadeIn">
+        <h3 class="display-3 font-weight-bold text-primary mb-0 pt-md-5 pt-5">Arabian Shawarma login</h3>
+        <hr class="hr-light my-4 w-75">
+        <h4 class="subtext-header mt-2 mb-4">One of life's greatest joys is Eating good food,one step away to Signup...</h4>
+      </div>
+    <center>
+        <form method="POST">
+            {% csrf_token %} 
+            <h4 class="text-white"><label for="un">Username</label></h4>
+            <input type="text" name="un" id="un"><br><br>
+
+            <h4 class="text-white"><label for="pw">Password</label></h4>
+            <input type="password" name="pw" id="pw"><br><br>
+
+            <input type="submit" class="btn btn-info my-4" value="sign in">
+        </form>
+        <style>
+            form{
+                
+                border-radius: 20px;
+                 
+            }     
+        </style>
+
+    </center>
+
+{% endblock %}
